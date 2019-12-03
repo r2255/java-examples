@@ -1,0 +1,28 @@
+package ramazandeneme;
+
+
+import java.util.Arrays;
+
+class try1 {
+
+public static void main(String[] args) {
+          
+	//Çok boyutlu diziler
+	int dizi[][]= {{1,2},{3,4}};
+	System.out.println("1.satýr 1.sutun:"+dizi[0][0]);
+	System.out.println("1.satýr 2.sutun:"+dizi[0][1]);
+	System.out.println("2.satýr 1.sutun:"+dizi[1][0]);
+	System.out.println("2.satýr 2.sutun:"+dizi[1][1]);
+	
+	for(int i=0;i<dizi.length;i++) 
+	{
+		for(int j=0;j<dizi.length;j++) 
+		{
+			System.out.print(dizi[i][j]+"\t");
+		}
+		     System.out.println(" ");
+	}
+}
+	}
+
+

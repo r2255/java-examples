@@ -1,0 +1,28 @@
+package ramazandeneme;
+
+import java.util.Scanner;
+import java.lang.Math.*;
+
+class try1 {
+static Scanner al=new Scanner(System.in);
+static Scanner at=new Scanner(System.in);	
+public static void main(String[] args) {
+          
+	System.out.println("dizi kaç elemanlý olacak:");
+	int a=al.nextInt();
+	
+	int dizi[]=new int[a];
+	for(int i=0;i<a;i++) {
+		int c=at.nextInt();
+		dizi[i]=c;
+	}
+	
+    for(int i:dizi) {
+    	System.out.println(i);
+    }
+		
+			
+		}
+	}
+
+

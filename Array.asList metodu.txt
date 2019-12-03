@@ -1,0 +1,30 @@
+package ramazandeneme;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+class try1 {
+
+public static void main(String[] args) {
+        String dizi1[]= {"istanbul","ordu","edirne","kocaeli"};
+        Integer dizi2[]= {34,52,22,41};
+        
+        List listeyapisi1=new ArrayList();
+        List listeyapisi2=new ArrayList();
+        
+        listeyapisi1=Arrays.asList(dizi1); //dizi1 liste yapýsýna kopyalandý
+        listeyapisi2=Arrays.asList(dizi2); //dizi2 liste yapýsýna kopyalandý
+	
+        System.out.println(listeyapisi1);
+        System.out.println(listeyapisi2);
+        
+        
+        
+	
+	
+}
+	}
+
+

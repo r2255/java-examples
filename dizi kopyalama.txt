@@ -1,0 +1,19 @@
+package ramazandeneme;
+
+class try1 {
+
+public static void main(String[] args) {
+          
+	
+int dizi1[]= {1,2,3,4,5};
+int dizi2[]= new int[5];
+
+System.arraycopy(dizi1, 0, dizi2, 2, 3); // (kaynak dizi,kaynak dizinin baþlangýç indisi,hedef dizi,hedef dizinin baþlanhgýç indisi,adedi)
+	
+for(int i:dizi2)
+	System.out.println(i);
+	
+}
+	}
+
+

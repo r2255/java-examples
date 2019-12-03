@@ -1,0 +1,47 @@
+package vize;
+import java.util.Scanner;
+
+public class deneme {
+
+	public static void main(String[] args) {
+
+		String degisken="5";
+		int yeni1=Integer.valueOf(degisken);
+		int yeni2=Integer.parseInt(degisken);
+		System.out.println(degisken);
+		System.out.println("valuOf:integer tipinde nesne döndürür --->"+yeni1);
+		System.out.println("parseInt:int tipinde bir veri tipi döndürür --->"+yeni2);
+
+		System.out.println("---------------------------------------------------"); 
+		
+		int sayi=47;
+		String deger1=String.valueOf(sayi);
+		String deger2=Integer.toString(sayi);
+		System.out.println(sayi);
+		System.out.println(deger1+"\n"+deger2);
+		
+		System.out.println("---------------------------------------------------");
+		
+		double a=354.45;  //double dan int e casting
+		int b=(int)a;
+		System.out.println("integer:"+b);
+		
+		int c=345;  //int den double a casting
+		double d=(double)c;
+		System.out.println("double:"+d);
+		
+		float k=654.4f; //float dan long a casting
+		long m=(long)k;
+		System.out.println("long:"+m);
+		
+		System.out.println("---------------------------------------------------");
+		
+		long x1=1546546;    // stringe cast
+		float x2=454.4f;
+		byte x3=5; 
+		String x11=Long.toString(x1);  System.out.println(x11);
+		String x22=Float.toString(x2); System.out.println(x22);
+		String x33=Byte.toString(x3);  System.out.println(x33);
+		
+}
+}

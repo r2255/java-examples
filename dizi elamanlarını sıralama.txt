@@ -1,0 +1,23 @@
+package ramazandeneme;
+
+
+import java.util.Arrays;
+
+class try1 {
+
+public static void main(String[] args) {
+          
+	int dizi[]= {12,45,33,44,59,56,456,1254,154,125,465};
+	
+	Arrays.sort(dizi);
+	for(int i:dizi)
+		System.out.println(i);
+
+   /*     Arrays.sort(dizi,1,4); //1. ve 4. elemanlar arasýndakileri sýralar
+        for(int i:dizi)
+		System.out.println(i);   */
+
+}
+	}
+
+

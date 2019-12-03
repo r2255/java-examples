@@ -1,0 +1,19 @@
+package ramazandeneme;
+
+
+import java.util.Arrays;
+
+class try1 {
+
+public static void main(String[] args) {
+          
+	//dizileri karþýlaþtýrmak için iki dizininde ayný tipte olamsý gerekir
+	char dizi1[]= {'r','s'};
+	char dizi2[]= {'r','s'};
+	char dizi3[]= {'r'};
+	System.out.println(Arrays.equals(dizi1,dizi2));
+	System.out.println(Arrays.equals(dizi1,dizi3));
+}
+	}
+
+

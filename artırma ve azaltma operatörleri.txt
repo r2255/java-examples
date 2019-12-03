@@ -1,0 +1,25 @@
+package vize;
+import java.util.Scanner;
+
+public class deneme {
+
+	public static void main(String[] args) {
+
+		int sayi=10;
+		int a,b,c,d,e,f;
+		System.out.println("sayı ilk hali "+sayi);
+		
+		a=++sayi;  //sayıyı 1 artır sonra a ya ata
+		b=sayi--;  //sayiyi b ye at sonra sayıyı 1 azalt
+		c=--sayi;  //sayıyı 1 azalt sonra c ye ata
+		d=++sayi;  //sayıyı 1 artır sonra d ye ata
+		e=sayi++;   //sayıyı e ye at sonra 1 artır
+	  
+		System.out.println("a: "+a);
+		System.out.println("b: "+b);
+		System.out.println("c: "+c);
+		System.out.println("d: "+d);
+		System.out.println("e: "+e);
+		
+}
+}
