@@ -1,0 +1,29 @@
+package yazlab2;
+
+import java.util.*;
+
+public class random{
+
+	public static void main(String[] args) {
+		
+		 Scanner s=new Scanner(System.in);
+		 System.out.println("1-100 arasýnda sayý giriniz:");
+	
+		 Random r=new Random(); //random sýnýfý
+		 int b=r.nextInt(100);  //random üretilen sayý(1-100 arasýnda)
+         int sayac=0;
+		 
+         while(true) {
+		    int a=s.nextInt();  // kullanýcýdan alýnan sayý 
+			sayac++;
+			
+	        if(a<b) 
+			 System.out.println("ÇIK");
+		    else if(a>b)
+			 System.out.println("ÝN");
+		    else if(a==b)
+		     {System.out.println("TEBRÝKLER BULDUNUZ"); 	 
+	         System.out.println(sayac+". denemede buldunuz"); break;}
+		 }
+	}
+}
