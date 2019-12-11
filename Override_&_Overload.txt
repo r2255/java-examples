@@ -1,0 +1,36 @@
+package string;
+
+public class override_and_overload extends Ornek {
+
+    // Overload
+
+    public void selamVer() {
+        System.out.println("Selam");
+    }
+
+    public void selamVer(String isim) {
+        System.out.println("Selam " + isim);
+    }
+
+    public void selamVer(String isim, String soyisim) {
+        System.out.println("Selam " + isim + " " + soyisim);
+    }
+
+    // Override
+
+    @Override
+    public void hareketEt() {
+
+        System.out.println("hareketEt metodu override edildi");
+    }
+
+}
+
+class Ornek {
+
+    public void hareketEt() {
+
+        System.out.println("hareket edildi");
+    }
+
+}
