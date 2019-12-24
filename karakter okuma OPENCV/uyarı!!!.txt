@@ -1,0 +1,1 @@
+ Seçilen resmin düzgün bir þekilde okunabilmesi için resimdeki yazýlar ile kenardaki boþluklar çok az olmalýdýr. Aksi halde karakterler okunamamaktadýr.

@@ -1,0 +1,107 @@
+package gui;
+import net.sourceforge.tess4j.Tesseract; 
+import net.sourceforge.tess4j.TesseractException;
+import java.lang.System;
+
+import java.util.StringTokenizer;
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
+
+
+
+import javax.swing.JScrollPane;
+
+
+public class denemegui extends JFrame {
+	static JFileChooser  dosya = new JFileChooser(); //bilgisayardan dosya seçmek için
+	static JPanel contentPane;
+	private JTextArea textArea;
+	private JScrollPane scrollPane;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					denemegui frame = new denemegui();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		
+	}
+	
+	
+	static void Parsing(String text1) //parçalama metodu
+	{ 
+		StringTokenizer token=new StringTokenizer(text1); //parsing
+		System.out.println("////////////////////////PARSING///////////////////////////");
+		while(token.hasMoreTokens()) 
+		{
+			System.out.println(token.nextToken());
+	    }	
+	}
+	
+	public denemegui() { 
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100,540, 312);
+		setResizable(false);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JButton buton1 = new JButton("resim ekle");
+		buton1.setBounds(10, 101, 96, 37);
+		buton1.addActionListener( new ActionListener() {//buton1(resim seçme)in yapacaðý görev
+			
+			public void actionPerformed(ActionEvent e) {
+				
+				 int state = dosya.showOpenDialog(null);//dosya seçme ekraný açýlýr
+		         File file = dosya.getSelectedFile(); //dosya seçimi yapýlýr
+		         String s="ÝPTAL EDÝLDÝ";
+
+		         if(file != null && state == JFileChooser.APPROVE_OPTION) //dosya secilirse
+		         {
+		           s = "DOSYA SEÇÝLDÝ: " + file.getPath();// bu mesaj gösterilir
+		         }
+		         else JOptionPane.showMessageDialog(null,s);//dosya seçilmezse bu mesaj gösterilir
+ 
+		         Tesseract tesseract = new Tesseract();
+				 try 
+				 {
+					tesseract.setDatapath("C:\\OCR Tesseract\\Tess4J\\tessdata");
+					String text = tesseract.doOCR(new File(file.getPath()));
+					textArea.setText(text);
+				 } 
+				 
+				 catch (TesseractException e1)
+				 {	
+				   e1.printStackTrace();
+				 }
+				     
+		 }});
+		contentPane.setLayout(null);
+		contentPane.add(buton1);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+		scrollPane.setBounds(110, 11, 359, 226);
+		contentPane.add(scrollPane);
+		textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+	}
+}
